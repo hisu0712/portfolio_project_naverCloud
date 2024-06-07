@@ -14,14 +14,19 @@
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="https://alvarotrigo.com/fullPage/fullpage.css" />
     <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- js / fullpage -->
+    <script src="https://www.navercloudcorp.com/static/js/plugin/fullpage.offsetSections.min.js"></script>
+    <script type="text/javascript" src="https://alvarotrigo.com/fullPage/vendors/scrolloverflow.js"></script>
+    <script type="text/javascript" src="https://alvarotrigo.com/fullPage/fullpage.scrollOverflowReset.limited.min.js"> </script>
+    <script type="text/javascript" src="https://alvarotrigo.com/fullPage/fullpage.extensions.min.js"></script>
 </head>
 <body>
     <div id="fullpage">
@@ -65,7 +70,7 @@
         </header>
 
         <!-- sc-visual -->
-        <section class="sc-visual fullpage-section fp-auto-height">
+        <section class="fp-section sc-visual" data-fp-styles="null" data-anchor="Main">
             <h2 class="blind">메인 슬라이드</h2>
             <div class="swiper sc-visual-swiper">
                 <div class="swiper-wrapper">
@@ -131,7 +136,7 @@
         </section>
         
         <!-- sc-intro -->
-        <section class="sc-intro fullpage-section fp-auto-height">
+        <section class="fp-section sc-intro"  data-percentage="30" data-centered="false" data-fp-styles="null" data-anchor="Introduce">
             <div class="inner sc-wrapper">
                 <h2 class="headline type_c">네이버클라우드가 더 큰 성장을 위한 <em class="black-item block-item">Hyperscale AI 클라우드 플랫폼으로 변화합니다</em></h2>
                 <a href="" class="link-btn type1">소개 바로가기</a>
@@ -143,8 +148,9 @@
                 <img src="./assets/images/main/sc-intro_m.png" alt>
             </div>
         </section>
+
         <!-- sc-service -->
-        <section class="sc-service fullpage-section fp-auto-height">
+        <section class="fp-section sc-service" data-percentage="30" data-centered="false" data-fp-styles="null" data-anchor="Service">
             <div class="inner sc-wrapper">
                 <div class="col-left">
                     <h2 class="headline">
@@ -192,8 +198,9 @@
                 </ul>
             </div>
         </section>
-        <!-- sc-news -->
-        <div class="fullpage-section">
+
+        <div class="fp-section fp-auto-height fp-table" data-fp-styles="null" data-anchor="ITecosystem">
+            <!-- sc-news -->
             <section class="sc-news sc-wrapper">
                 <h2 class="headline">네이버클라우드의<br><em class="black-item">새로운 소식</em>을 만나 보세요</h2>
                 <div class="inner">
@@ -342,12 +349,9 @@
                         <p class="copy">ⓒ NAVER Cloud Corp. All Rights Reserved.</p>
                     </address>
                 </div>
-                <button class="scroll-top"></button>
             </footer>
         </div>
     </div>
-
     <script src="./assets/js/main.js"></script>
-    <script src="./jquery.fullPage.js"></script>
 </body>
 </html>

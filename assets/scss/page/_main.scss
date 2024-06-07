@@ -202,13 +202,21 @@ body.hidden {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 110px;
     width: 100%;
     text-align: center;
-    @include tablet() {                   
-        padding-top: 48px;
-    }
 
+    .inner {
+        padding-top: 110px;
+        @include tablet() {                   
+            padding-top: 48px;
+        }
+
+        .headline {
+            @include tablet() {        
+                margin: 0 auto 24px;
+            }
+        }
+    }
     .img-box {
         max-width: 842px;
         height: 304px;
@@ -230,7 +238,8 @@ body.hidden {
         &.moblie { 
             display: none; 
             @include tablet() {   
-                display: block;  
+                display: flex;
+                justify-content: center;
                 margin: 49px auto 59px;         
             }
         }
@@ -239,7 +248,7 @@ body.hidden {
 
 // sc-service
 .sc-service {
-    background: #f9f9f9;
+    background: #f6f7f8;
     overflow: hidden;
     height: 860px;
     @include tablet() {                   
@@ -264,8 +273,13 @@ body.hidden {
         }
         .col-right {
             width: 43%;
+            height: 860px;
+            overflow: hidden;
             @include laptop() {     
                 width: 58%;            
+            }
+            @include tablet() {  
+                height: max-content;
             }
     
             .img-cols {
@@ -447,6 +461,10 @@ body.hidden {
         grid-row-gap: 16px;                  
     }
 
+    &.sc-wrapper {
+        margin: 0;
+        max-width: none;
+    }
     .content {
         position: relative;
         display: inline-block;

@@ -1,9 +1,9 @@
 #footer {
-    background: #f9f9f9;
+    background: #f6f7f8;
 
     .inner {
         display: flex;
-        margin: 0 auto 50px;
+        margin: 0 auto;
         max-width: 1476px;
         position: relative;
         padding: 50px 90px;
@@ -178,25 +178,5 @@
                 }
             }
         }
-    }
-    .scroll-top {
-        display: block;
-        width: 60px;
-        height: 60px;
-        position: fixed;
-        right: 50px; bottom: 50px;
-        background: url('../images/layout/footer_scroll-top.png') no-repeat center;
-        background-size: cover;
-        z-index: 10;
-        transition: 0.3s;
-        opacity: 0;
-        visibility: hidden;
-        @include laptop() {                 
-            width: 48px;
-            height: 48px;
-            bottom: 30px; right: 30px;
-        }
-
-        &.on { opacity: 1; visibility: visible }
     }
 }
